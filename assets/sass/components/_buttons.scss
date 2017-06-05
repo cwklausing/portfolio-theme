@@ -1,0 +1,29 @@
+/* ===========================================================
+  Buttons
+============================================================ */
+
+.button {
+    background-color: rgba(0,0,0,0.2);
+    border: 3px solid white;
+	color: white;
+    padding: 0.5rem 1.6rem;
+	transition:
+		background-color 200ms ease-in-out,
+		color 200ms ease-in-out;	
+
+	&:hover {
+		background-color: white;
+		color: $hover-color;
+		transition:
+			background-color 200ms ease-in-out,
+			color 200ms ease-in-out;
+	}
+
+    &:active {
+    	box-shadow: 5px 5px 5px -5px #404040 inset;
+    	color: $dark-gray;
+		transition:
+			box-shadow 100ms ease-in-out,
+			color 100ms ease-in-out;
+    }
+}

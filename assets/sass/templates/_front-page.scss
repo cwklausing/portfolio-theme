@@ -1,0 +1,59 @@
+/* ===========================================================
+  Front Page
+============================================================ */
+
+.fold-first {
+	position: relative;
+	@include bp(md) {
+		display: flex;
+	}
+}
+
+.fold-second {
+	background-color: $cream;
+	
+	&__text {
+		padding: 4rem 1.5rem;
+	}
+	&__title {
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+	&__underline {
+		margin: 0 auto;
+	}
+}
+
+.fold-third {
+	background-color: $orange;
+}
+
+.home-hero {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+
+	img {
+		height: 100%;
+		@include object-fit(cover);
+	}
+}
+
+.welcome-section {
+	background: $trans-gray;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	min-height: 35rem;
+	position: relative;
+	padding: 2.0rem;
+
+	&__text {
+		line-height: 1.3;
+		margin: 0;
+		padding: 0 0 3.0rem;
+		text-align: right;
+	}
+}
