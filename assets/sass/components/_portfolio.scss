@@ -1,0 +1,85 @@
+.portfolio {
+	background-color: $gold;
+	padding: 4rem 1.5rem;
+	&__title {
+		margin: 0 0 2rem;
+		text-align: center;
+	}
+
+}
+
+.port-item {
+	&__images {
+		position: relative;
+		height: 200px;
+	}
+	&__title {
+		text-align: center;
+	}
+
+	&__desktop-image {
+		background-color: $dark-gray;
+		border-left: 5px solid $gray;
+	    border-radius: 1rem;
+	    height: 165px;
+	    padding: 1rem;
+	    position: absolute;
+		left: 0;
+	    top: 0;
+		transform: perspective(600px) rotateY(24deg);
+
+		img {
+			height: calc(100% - 5px);
+		}
+
+		&:after {
+		    content: ' ';
+		    display: block;
+		    background-color: $dark-gray;
+		    border-left: 5px solid $gray;
+		    border-top: 2px solid $gray;
+		    border-top-left-radius: 15px;
+		    border-top-right-radius: 15px;
+		    height: 20px;
+		    width: 100px;
+		    position: absolute;
+		    bottom: 15px;
+		    left: 50%;
+		    transform: translate(-50%, 40px);
+		}
+	}
+	&__mobile-image {
+		background-color: #303030;
+	    border-radius: 10px;
+	    box-shadow: -4px 2px 14px -5px #303030;
+	    padding: 1.5rem 0.3rem 1rem;
+	    position: absolute;
+	    right: 0;
+	    bottom: 10px;
+	    transform: perspective(500px) rotateY(-10deg);
+	    width: 30%;
+	    &:before {
+	    	background-color: white;
+	    	border-radius: 3px;
+			content: '';
+			height: 2px;
+			left: 50%;
+			position: absolute;
+			top: 5px;
+			transform: translate(-50%);
+			width: 8px;
+	    }
+	    &:after {
+			background-color: transparent;
+			border: 1px solid $gray;
+			border-radius: 50%;
+			bottom: 5px;
+			content: '';
+			height: 8px;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%);
+			width: 8px;
+	    }
+	}
+}

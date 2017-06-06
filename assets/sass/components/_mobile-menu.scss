@@ -45,6 +45,10 @@
     .bottom {
 		transform: translateY(1.1rem);
     }
+
+    &:hover {
+    	cursor: pointer;
+    }
 }
 
 .mobile-menu-open {
