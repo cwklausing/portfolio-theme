@@ -111,6 +111,11 @@ img {
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
+* {
+  box-sizing: border-box; }
+  *:after, *:before {
+    box-sizing: border-box; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -323,7 +328,7 @@ h6 {
   line-height: 2.8rem; }
 
 p {
-  font-size: 2.0rem;
+  font-size: 1.6rem;
   line-height: 2.6rem; }
 
 a {
@@ -481,6 +486,10 @@ div {
 /* ===========================================================
   Navigation
 ============================================================ */
+.main-nav .page_item {
+  padding: 1rem 0;
+  text-align: center; }
+
 @media (min-width: 768px) {
   #menu-main-menu, #menu-footer-menu {
     padding: 20px 0; } }
@@ -573,9 +582,9 @@ div {
   Buttons
 ============================================================ */
 .button {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 3px solid white;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 3px solid #E9E6DD;
+  color: #E9E6DD;
   padding: 0.5rem 1.6rem;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
   .button:hover {
@@ -587,24 +596,83 @@ div {
     color: #404040;
     transition: box-shadow 100ms ease-in-out, color 100ms ease-in-out; }
 
+/* 	Contains styling for mobile menu container, 
+	NOT styling for the actual menu items. See navigation.scss */
+.main-nav {
+  position: fixed;
+  width: 100%;
+  background-color: #E9E6DD;
+  box-shadow: 0px -5px 14px 5px #212121;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 11rem 2rem 2rem;
+  transform: translateY(-100vh);
+  z-index: 1;
+  transition: transform 400ms ease-out; }
+
+.mobile-menu-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+  width: 3rem;
+  height: 2.6rem; }
+  .mobile-menu-button .top,
+  .mobile-menu-button .middle,
+  .mobile-menu-button .bottom {
+    border-bottom: 4px solid #BD8D50;
+    position: absolute;
+    top: 1.1rem;
+    width: 100%;
+    transition: transform 300ms ease-in-out; }
+  .mobile-menu-button .top {
+    transform: translateY(-1.1rem); }
+  .mobile-menu-button .middle {
+    transform: translateY(0rem);
+    transition: opacity 300ms ease-out, transform 300ms ease-in-out; }
+  .mobile-menu-button .bottom {
+    transform: translateY(1.1rem); }
+
+.mobile-menu-open .main-nav {
+  transform: translateY(0vh);
+  transition: transform 400ms ease-out; }
+.mobile-menu-open .mobile-menu-button .top {
+  transform: translateY(0) rotate(45deg); }
+.mobile-menu-open .mobile-menu-button .middle {
+  transform: translateY(0) rotate(360deg);
+  opacity: 0; }
+.mobile-menu-open .mobile-menu-button .bottom {
+  transform: translateY(0) rotate(-45deg); }
+
 /* ===========================================================
   Header
 ============================================================ */
 header {
-  background-color: #2D5A72;
-  padding: 10px; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; }
 
 .site-header {
   display: flex;
   justify-content: space-between; }
+  .site-header__bar {
+    background-color: #3E3E4D;
+    box-shadow: 0px -5px 14px 5px #212121;
+    padding: 2rem;
+    width: 100%;
+    z-index: 2; }
   .site-header__title {
+    color: #E9E6DD;
     margin: 0; }
 
 /* ===========================================================
   Footer
 ============================================================ */
 footer {
-  background-color: #A3565A; }
+  background-color: #3E3E4D; }
 
 /* ===========================================================
   Front Page
@@ -613,7 +681,7 @@ footer {
   position: relative; }
 
 .fold-second {
-  background-color: #E4DFDA; }
+  background-color: #E9E6DD; }
   .fold-second__text {
     padding: 4rem 1.5rem; }
   .fold-second__title {
@@ -623,7 +691,7 @@ footer {
     margin: 0 auto; }
 
 .fold-third {
-  background-color: #C6A97D; }
+  background-color: #BD8D50; }
 
 .home-hero {
   position: absolute;

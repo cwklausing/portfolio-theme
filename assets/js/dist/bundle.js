@@ -234,7 +234,24 @@
 
 	hijackAttributes();
 
+	var mobile_menu = function ($) {
+		var $menu_button = $('.mobile-menu-button');
+
+		var toggle_menu = function toggle_menu() {
+			$('body').toggleClass('mobile-menu-open');
+		};
+
+		var _public = {};
+
+		_public.init = function () {
+			$menu_button.on('click', toggle_menu);
+		};
+
+		return _public;
+	}(jQuery);
+
 	// Vendors
 	fix$1();
+	mobile_menu.init();
 
 }());
