@@ -24,9 +24,16 @@ $menu_array = array(
 
 <body <?php body_class(); ?> >
   <header class="site-header">
-    <a href="<?php bloginfo( 'url' ); ?>" class="site-header__link">
-      <h2 class="site-header__title"><?php bloginfo( 'name' ); ?></h2>
-    </a>
+    <div class="site-header__bar">
+      <a href="<?php bloginfo( 'url' ); ?>" class="site-header__branding">
+        <h2 class="site-header__title"><?php bloginfo( 'name' ); ?></h2>
+      </a>
+      <div class="mobile-menu-button">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
     <nav class="main-nav">
       <?php wp_nav_menu( $menu_array ); ?>
     </nav>

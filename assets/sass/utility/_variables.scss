@@ -6,18 +6,16 @@ $secondary-font: 'Slabo 27px', serif;
 // Colors
 
 // Site color palette
-$blue: #2D5A72;
-$teal: #398482;
-$cream: #E4DFDA;
-$orange: #C6A97D;
-$red: #A3565A;
+$blue: #3E3E4D;
+$white: #E9E6DD;
+$gold: #BD8D50;
 
-$transparent-gray: rgba(40,40,40,0.8);
-$trans-gray: linear-gradient(40deg, rgba(100,100,100,0.3), rgba(250,250,250,0.3));
+// Other colors
 $black: #212121;
 $dark-gray: #404040;
 $light-gray: #909090;
-$gold: #efcf4f;
+$transparent-gray: rgba(40,40,40,0.8);
+$trans-gray: linear-gradient(40deg, rgba(100,100,100,0.3), rgba(250,250,250,0.3));
 $hover-color: $light-gray;
 
 // Breakpoints

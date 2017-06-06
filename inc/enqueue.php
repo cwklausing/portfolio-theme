@@ -22,6 +22,5 @@ if ( ! function_exists( 'sbconnor_js' ) ) {
     wp_enqueue_script( 'app_js', get_template_directory_uri() . '/assets/js/dist/bundle.js', array('jquery'), '', true ) ;
 
   }
+  add_action( 'wp_enqueue_scripts', 'sbconnor_js' );
 }
-
-add_action( 'wp_enqueue_scripts', 'sbconnor_js' );

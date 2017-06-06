@@ -2,6 +2,13 @@
   Navigation
 ============================================================ */
 
+.main-nav {
+  .page_item {
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
 #menu-main-menu, #menu-footer-menu {
   @include bp(tablet) {
     padding: 20px 0;

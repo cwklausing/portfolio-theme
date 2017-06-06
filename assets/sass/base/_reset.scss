@@ -7,6 +7,14 @@
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
 
+* {
+  box-sizing: border-box;
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;

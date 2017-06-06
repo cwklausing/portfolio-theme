@@ -3,9 +3,9 @@
 ============================================================ */
 
 .button {
-    background-color: rgba(0,0,0,0.2);
-    border: 3px solid white;
-	color: white;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid $white;
+	color: $white;
     padding: 0.5rem 1.6rem;
 	transition:
 		background-color 200ms ease-in-out,
