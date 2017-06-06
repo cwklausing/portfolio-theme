@@ -30,11 +30,11 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-				files: '**/*.scss',
+				files: './assets/**/*.scss',
 				tasks: ['sass']
 			},
 			js: {
-				files: '**/*.js',
+				files: './assets/**/*.js',
 				tasks: ['rollup']
 			}
 		}
@@ -43,5 +43,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-rollup');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default', ['watch', 'uglify']);
+	grunt.registerTask('default', ['watch']);
 };
