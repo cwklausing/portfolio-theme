@@ -103,6 +103,9 @@ img {
   max-width: 100%;
   height: auto; }
 
+body {
+  background-color: #e4d6d5; }
+
 /**
  * Taken from Twentysixteen theme:
  *
@@ -302,31 +305,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Slabo 27px", serif;
+  font-family: "Raleway", serif;
   margin: 0 0 1.5rem; }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   padding: 30px 0; }
 
 h2 {
-  font-size: 3.2rem; }
+  font-size: 2.8rem; }
 
 h3 {
-  font-size: 2.8rem;
-  line-height: 3.6rem; }
-
-h4 {
   font-size: 2.6rem;
   line-height: 3.2rem; }
 
-h5 {
+h4 {
   font-size: 2.4rem;
-  line-height: 3rem; }
+  line-height: 3.0rem; }
 
-h6 {
+h5 {
   font-size: 2.2rem;
   line-height: 2.8rem; }
+
+h6 {
+  font-size: 2.0rem;
+  line-height: 2.6rem; }
 
 p {
   font-size: 1.6rem;
@@ -759,6 +762,7 @@ header {
     z-index: 2; }
   .site-header__title {
     color: #dfdee6;
+    font-weight: normal;
     margin: 0; }
 
 /* ===========================================================
@@ -775,7 +779,6 @@ footer {
   position: relative; }
 
 .fold-second {
-  background-color: #e4d6d5;
   padding: 4rem 1.5rem; }
   .fold-second__header {
     margin-bottom: 3rem; }
