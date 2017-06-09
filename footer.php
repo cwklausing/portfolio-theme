@@ -12,23 +12,17 @@ $menu_array = array(
 ?>
 
 <footer class="site-footer">
-  <div class="social-media">
-    <a href="<?php echo esc_url( $facebook_link ); ?>" target="_blank">
-      <svg aria-labelledby="icon-facebook" class="social-media__icon">
-        <use xlink:href="#icon-facebook"></use>
-      </svg>
-    </a>
-    <a href="<?php echo esc_url( $instagram_link ); ?>" target="_blank">
-      <svg aria-labelledby="icon-instagram" class="social-media__icon">
-        <use xlink:href="#icon-instagram"></use>
-      </svg>
-    </a>
-  </div>
-
   <nav class="site-footer__nav">
     <?php wp_nav_menu( $menu_array ); ?>
   </nav>
 
+  <div class="social-media">
+    <a href="<?php echo esc_url( $github_link ); ?>" target="_blank">
+      <svg aria-labelledby="icon-github" class="social-media__icon">
+        <use xlink:href="#icon-github"></use>
+      </svg>
+    </a>
+  </div>
   <?php wp_footer(); ?>
 </footer>
 
