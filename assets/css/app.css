@@ -313,33 +313,33 @@ h1 {
   padding: 30px 0; }
 
 h2 {
-  font-size: 2.8rem; }
+  font-size: 2.8rem;
+  line-height: 3.6rem; }
 
 h3 {
   font-size: 2.6rem;
-  line-height: 3.2rem; }
+  line-height: 3.4rem; }
 
 h4 {
   font-size: 2.4rem;
-  line-height: 3.0rem; }
+  line-height: 3.2rem; }
 
 h5 {
   font-size: 2.2rem;
-  line-height: 2.8rem; }
+  line-height: 2.0rem; }
 
 h6 {
   font-size: 2.0rem;
-  line-height: 2.6rem; }
+  line-height: 2.8rem; }
 
 p {
   font-size: 1.6rem;
   line-height: 2.6rem; }
 
 a {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-decoration: none;
-  color: #212121;
-  letter-spacing: 1px; }
+  color: #212121; }
   a:hover {
     color: #909090;
     text-decoration: none; }
@@ -354,14 +354,14 @@ li {
   list-style: none; }
 
 span {
-  font-size: 2.4rem;
-  line-height: 3.6rem; }
+  font-size: 1.6rem;
+  line-height: 2.6rem; }
 
 pre {
   word-wrap: break-word; }
 
 div {
-  font-size: 2.0rem;
+  font-size: 1.6rem;
   line-height: 2.6rem; }
 
 .sbc-underline {
@@ -571,6 +571,11 @@ div {
 /* ===========================================================
   Icons
 ============================================================ */
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: currentColor; }
+
 .social-media svg {
   height: 54px;
   width: 54px;
@@ -582,10 +587,11 @@ div {
   Buttons
 ============================================================ */
 .button {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 3px solid #dfdee6;
   color: #dfdee6;
   padding: 0.5rem 1.6rem;
+  letter-spacing: 1px;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
   .button:hover {
     background-color: white;
@@ -614,7 +620,7 @@ div {
 
 .mobile-menu-button {
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   right: 2rem;
   z-index: 2;
   width: 3rem;
@@ -648,21 +654,27 @@ div {
 .mobile-menu-open .mobile-menu-button .bottom {
   transform: translateY(0) rotate(-45deg); }
 
-.portfolio {
-  background-color: #8d7987; }
-  .portfolio__header {
-    padding: 4rem 0; }
-  .portfolio__title {
-    margin: 0 0 2rem;
-    text-align: center; }
+.portfolio__header {
+  background-color: #576973;
+  padding: 4rem 0; }
+.portfolio__title {
+  color: #dfdee6;
+  margin: 0;
+  text-align: center; }
+.portfolio__underline {
+  border-color: #dfdee6; }
+  .portfolio__underline:after {
+    border-color: #dfdee6; }
 
 .port-item {
   padding: 3rem 1.5rem;
+  position: relative;
   /* Computer/phone graphics */ }
   .port-item__images {
     position: relative;
     height: 200px; }
   .port-item__title {
+    margin-bottom: 2.5rem;
     text-align: center; }
   .port-item:nth-of-type(3n - 2) {
     background-color: #557f5b; }
@@ -718,7 +730,7 @@ div {
     right: 9px;
     bottom: -2px;
     transform: perspective(500px) rotateY(-10deg);
-    width: 27%; }
+    width: 26%; }
     .port-item__mobile-image:before {
       background-color: white;
       border-radius: 3px;
@@ -740,6 +752,24 @@ div {
       position: absolute;
       transform: translate(-50%);
       width: 8px; }
+
+.port-mobile-message {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%; }
+  .port-mobile-message__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.0rem; }
+    .port-mobile-message__link .icon {
+      height: 2rem;
+      margin-left: 1rem; }
+  .port-mobile-message__text {
+    display: flex;
+    align-items: center;
+    margin: 0; }
 
 /* ===========================================================
   Header
@@ -770,7 +800,11 @@ header {
 ============================================================ */
 footer {
   background-color: #576973;
-  color: #dfdee6; }
+  color: #dfdee6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem; }
 
 /* ===========================================================
   Front Page

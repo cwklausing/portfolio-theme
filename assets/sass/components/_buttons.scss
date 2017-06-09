@@ -3,10 +3,11 @@
 ============================================================ */
 
 .button {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     border: 3px solid $white;
 	color: $white;
     padding: 0.5rem 1.6rem;
+    letter-spacing: 1px;
 	transition:
 		background-color 200ms ease-in-out,
 		color 200ms ease-in-out;	

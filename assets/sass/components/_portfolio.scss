@@ -1,22 +1,30 @@
 .portfolio {
-	background-color: $tope;
 	&__header {
+		background-color: $blue;
 		padding: 4rem 0;
 	}
 	&__title {
-		margin: 0 0 2rem;
+		color: $white;
+		margin: 0;
 		text-align: center;
 	}
-
+	&__underline {
+		border-color: $white;
+		&:after {
+			border-color: $white;
+		}
+	}
 }
 
 .port-item {
 	padding: 3rem 1.5rem;
+	position: relative;
 	&__images {
 		position: relative;
 		height: 200px;
 	}
 	&__title {
+		margin-bottom: 2.5rem;
 		text-align: center;
 	}
 	
@@ -87,7 +95,7 @@
 	    right: 9px;
 	    bottom: -2px;
 	    transform: perspective(500px) rotateY(-10deg);
-	    width: 27%;
+	    width: 26%;
 	    &:before {
 	    	background-color: white;
 	    	border-radius: 3px;
@@ -114,3 +122,29 @@
 	}
 }
 
+.port-mobile-message {
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	width: 100%;
+
+	@include bp(md) {
+		display: none;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2.0rem;
+		.icon {
+			height: 2rem;
+			margin-left: 1rem;
+		}
+	}
+	&__text {
+		display: flex;
+		align-items: center;
+		margin: 0;
+	}
+}
