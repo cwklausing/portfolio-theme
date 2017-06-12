@@ -1,9 +1,8 @@
 /**
  * Object fit polyfill
  */
-/**
- * Breakpoints mixin. Makes media queries easier.
- * Choose a point from the defined variable $brkpts in _variables.scss or set your own.
+/*
+ * Calculate breakpoints
  */
 /* =WordPress Core
 -------------------------------------------------------------- */
@@ -384,9 +383,6 @@ div {
   text-align: center; }
 
 /* ===========================================================
-  Utility
-============================================================ */
-/* ===========================================================
   Display
 ============================================================ */
 .flexing {
@@ -409,23 +405,9 @@ div {
   line-height: 2.33em;
   align-self: flex-end;
   height: 75px; }
-  @media (min-width: 980px) {
-    .overlay {
-      height: inherit;
-      opacity: 0;
-      padding: 0 20%;
-      align-self: auto; }
-      .overlay:hover {
-        opacity: 1; } }
 
 .margin-edge {
   margin: 0 10px; }
-  @media (min-width: 768px) {
-    .margin-edge {
-      margin: 0 2%; } }
-  @media (min-width: 980px) {
-    .margin-edge {
-      margin: 0 4%; } }
 .margin-top {
   margin-top: 30px; }
 .margin-bottom {
@@ -448,14 +430,8 @@ div {
 
 .none-tablet {
   display: none; }
-  @media (min-width: 768px) {
-    .none-tablet {
-      display: inherit; } }
 .none-smallscreen {
   display: none; }
-  @media (min-width: 980px) {
-    .none-smallscreen {
-      display: inherit; } }
 
 .float-left {
   float: left; }
@@ -487,25 +463,14 @@ div {
   padding: 1rem 0;
   text-align: center; }
 
-@media (min-width: 768px) {
-  #menu-main-menu, #menu-footer-menu {
-    padding: 20px 0; } }
 #menu-main-menu li, #menu-footer-menu li {
   text-align: center; }
 #menu-main-menu a, #menu-footer-menu a {
   font-weight: 700; }
 
-@media (min-width: 768px) {
-  #menu-main-menu {
-    margin: 20px 10%; } }
-
 .menu-item {
   width: 100%;
   margin: 10px 0; }
-  @media (min-width: 768px) {
-    .menu-item {
-      width: auto;
-      margin: 0; } }
 
 .site-footer__nav .page_item a {
   color: #dfdee6; }
@@ -527,30 +492,12 @@ div {
 
 .width-half {
   width: 95%; }
-  @media (min-width: 768px) {
-    .width-half {
-      width: 48%; } }
 
 .width-third {
   width: 95%; }
-  @media (min-width: 768px) {
-    .width-third {
-      width: 48%; } }
-  @media (min-width: 980px) {
-    .width-third {
-      width: 30%; } }
 
 .width-fourth {
   width: 95%; }
-  @media (min-width: 500px) {
-    .width-fourth {
-      width: 48%; } }
-  @media (min-width: 768px) {
-    .width-fourth {
-      width: 31%; } }
-  @media (min-width: 980px) {
-    .width-fourth {
-      width: 23%; } }
 
 /*
   Height styling
@@ -679,6 +626,9 @@ div {
   padding: 3rem 1.5rem;
   position: relative;
   /* Computer/phone graphics */ }
+  @media only screen and (min-width: 440px) {
+    .port-item {
+      padding: 3rem 2.5rem; } }
   .port-item__images {
     position: relative;
     height: 200px;
@@ -775,7 +725,7 @@ div {
       width: 8px; }
 
 .button--visit-site {
-  margin-top: 1rem; }
+  margin-top: 3rem; }
   .button--visit-site__link {
     display: flex;
     align-items: center;
@@ -831,6 +781,9 @@ footer {
 ============================================================ */
 .fold-first {
   position: relative; }
+  @media only screen and (min-width: 800px) {
+    .fold-first {
+      display: flex; } }
 
 .fold-second {
   padding: 4rem 1.5rem; }

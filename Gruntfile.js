@@ -4,6 +4,17 @@ var resolve = require('rollup-plugin-node-resolve');
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1
+			},
+			dist: {
+				files: {
+					'assets/css/app-min.css': ['assets/css/app.css']
+				}
+			}
+		},
 		rollup: {
 			options: {
 				format: 'iife',
@@ -31,7 +42,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: './assets/**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'cssmin']
 			},
 			js: {
 				files: './assets/**/*.js',
@@ -40,6 +51,7 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-rollup');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');

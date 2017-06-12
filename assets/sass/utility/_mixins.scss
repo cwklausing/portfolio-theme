@@ -7,33 +7,25 @@
 	font-family: 'object-fit: $fit;';
 }
 
-/**
- * Breakpoints mixin. Makes media queries easier.
- * Choose a point from the defined variable $brkpts in _variables.scss or set your own.
+// Breakpoints
+$bkpts: (
+	'xs': 440px,
+	'sm': 600px,
+	'md': 800px,
+	'lg': 1000px,
+	'xl': 1200px,
+	'xxl': 1600px,
+);
+
+/*
+ * Calculate breakpoints
  */
 @mixin bp( $point, $type: min, $media: screen ){
-
-	// Look in the keys first
-	@if map-has-key( $brkpts, $point ){
+	@if map-has-key( $bkpts, $point ){
 		@if $type == max {
-			@media only #{$media} and ( max-width: #{inspect( map-get( $brkpts, $point ) )} ){ @content; }
+			@media only #{$media} and ( max-width: #{inspect( map-get( $bkpts, $point ) )} ){ @content; }
 		} @else if $type == min {
-			@media only #{$media} and ( min-width: #{inspect( map-get( $brkpts, $point ) )} ){ @content; }
+			@media only #{$media} and ( min-width: #{inspect( map-get( $bkpts, $point ) )} ){ @content; }
 		}
 	}
-		// Fallback to a 'manual' breakpoint.
-		// Check to make sure that it is a number and has a unit (px, em).
-	@else if type-of( $point ) == number and not unitless( $point ) {
-		@if $type == max {
-			@media only #{$media} and ( max-width: #{$point} ){ @content; }
-		} @else if $type == min {
-			@media only #{$media} and ( min-width: #{$point} ){ @content; }
-		}
-	}
-		// The point wasn't in the $brkpts variable and isn't a valid unit.
-	@else {
-		@error "`#{$point}` is not a valid breakpoint.";
-	}
-
 }
-

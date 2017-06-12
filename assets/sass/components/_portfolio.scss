@@ -30,6 +30,11 @@
 .port-item {
 	padding: 3rem 1.5rem;
 	position: relative;
+
+	@include bp(xs) {
+		padding: 3rem 2.5rem;
+	}
+
 	&__images {
 		position: relative;
 		height: 200px;
@@ -148,11 +153,7 @@
 }
 
 .button--visit-site {
-	margin-top: 1rem;
-
-	@include bp(md) {
-		display: none;
-	}
+	margin-top: 3rem;
 
 	&__link {
 		display: flex;

@@ -20,13 +20,3 @@ $light-gray: #909090;
 $transparent-gray: rgba(40,40,40,0.8);
 $trans-gray: linear-gradient(40deg, rgba(100,100,100,0.3), rgba(250,250,250,0.3));
 $hover-color: $light-gray;
-
-// Breakpoints
-$bkpts: (
-	'xs': em(480),
-	'sm': em(640),
-	'md': em(800),
-	'lg': em(960),
-	'xl': em(1020),
-	'xxl': em(1180),
-);
