@@ -2,11 +2,22 @@
 	&__header {
 		background-color: $blue;
 		padding: 4rem 0;
+
+		@include bp(xs) {
+			padding: 5rem 0;
+		}
+		@include bp(md) {
+			padding: 7rem 0;
+		}
 	}
 	&__title {
 		color: #fff;
 		margin: 0;
 		text-align: center;
+	}
+	&__pieces {
+		display: flex;
+		flex-wrap: wrap;
 	}
 	&__underline {
 		border-color: $white;
@@ -16,23 +27,30 @@
 	}
 }
 
-.port-description {
-	background-color: #dfdee6;
-    padding: 2rem;
-    border-radius: 3px;
-    box-shadow: 3px 4px 25px -7px black;
-    margin-top: 4rem;
-    p {
-    	margin: 0;
-    }
-}
-
 .port-item {
 	padding: 3rem 1.5rem;
 	position: relative;
+	width: 100%;
 
 	@include bp(xs) {
 		padding: 3rem 2.5rem;
+	}
+
+	@include bp(lg) {
+		width: 50%;
+		flex-grow: 1;
+	}
+
+	&__description {
+		background-color: #dfdee6;
+	    padding: 2rem;
+	    border-radius: 3px;
+	    box-shadow: 3px 4px 25px -7px black;
+	    margin: 4rem auto 0;
+	    max-width: 60rem;
+	    p {
+	    	margin: 0;
+	    }
 	}
 
 	&__images {

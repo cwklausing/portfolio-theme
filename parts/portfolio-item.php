@@ -22,7 +22,7 @@ $mobile = get_field( 'mobile_image' )['sizes']['large'];
 			<div class="image-overlay"></div>
 		</a>
 	</div>
-	<div class="port-description">
+	<div class="port-item__description">
 		<?php the_content(); ?>
 	</div>
 	<div class="button--visit-site">

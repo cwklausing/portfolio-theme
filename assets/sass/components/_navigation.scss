@@ -37,7 +37,14 @@
 }
 
 .site-footer__nav {
-  .page_item a {
-    color: $white;
+  .page_item {
+    @include bp(xs) {
+      display: inline-block;
+      padding-right: 2rem;
+    }
+
+    a {
+      color: $white;
+    }
   }
 }
