@@ -15,14 +15,22 @@ $mobile = get_field( 'mobile_image' )['sizes']['large'];
 	<div class="port-item__images">
 		<a href="<?php echo esc_url( $url ); ?>" class="port-item__desktop-image" target="_blank">
 			<img src="<?php echo esc_url( $desktop ); ?>" />
-			<div class="image-overlay"></div>
+			<div class="image-overlay">
+				<span class="image-overlay__text">
+					<?php echo esc_html_e( 'Visit Site', 'sbconnor' ); ?>
+				</span>
+			</div>
 		</a>
 		<a href="<?php echo esc_url( $url ); ?>" class="port-item__mobile-image" target="_blank">
 			<img src="<?php echo esc_url( $mobile ); ?>" />
-			<div class="image-overlay"></div>
+			<div class="image-overlay">
+				<span class="image-overlay__text">
+					<?php echo esc_html_e( 'Visit Site', 'sbconnor' ); ?>
+				</span>
+			</div>
 		</a>
 	</div>
-	<div class="port-item__description">
+	<div class="port-item__description max-width">
 		<?php the_content(); ?>
 	</div>
 	<div class="button--visit-site">

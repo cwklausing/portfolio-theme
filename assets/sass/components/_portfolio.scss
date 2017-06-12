@@ -47,7 +47,6 @@
 	    border-radius: 3px;
 	    box-shadow: 3px 4px 25px -7px black;
 	    margin: 4rem auto 0;
-	    max-width: 60rem;
 	    p {
 	    	margin: 0;
 	    }
@@ -56,8 +55,13 @@
 	&__images {
 		position: relative;
 		height: 200px;
-		margin: 0 auto;
+		margin: 15px auto;
 		max-width: 320px;
+
+		@include bp(sm) {
+			height: 230px;
+			max-width: 350px;
+		}
 
 		&:before {
 			background-color: rgba(0, 0, 0, 0.2);
@@ -69,6 +73,30 @@
 		    height: 36px;
 		    width: 100%;
 		    transform: translateX(-50%);
+
+		    @include bp(sm) {
+		    	width: 110%;
+		    }
+		}
+
+		.image-overlay {
+			background-color: rgba(255,255,255,0.8);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			padding: 0.5rem;
+			position: absolute;
+			text-align: center;
+			transform: translateX(-50%) translateY(-50%);
+			transition:
+				opacity 300ms ease-in-out;
+			&:hover {
+				opacity: 1;
+				.image-overlay__text {
+					color: black;
+				}
+			}
 		}
 	}
 	&__title {
@@ -114,8 +142,26 @@
 	    top: 0;
 		transform: perspective(600px) rotateY(24deg);
 
+		@include bp(xs) {
+			height: 180px;
+		}
+
+		@include bp(sm) {
+			height: 200px;
+		}
+
 		img {
-			height: calc(100% - 5px);
+			height: 100%;
+		}
+
+		.image-overlay {
+			height: calc(100% - 2rem);
+			width: calc(100% - 2rem);
+			top: 50%;
+			left: 50%;
+			&__text {
+				font-size: 3rem;
+			}
 		}
 
 		&:after {
@@ -129,7 +175,7 @@
 		    height: 20px;
 		    width: 100px;
 		    position: absolute;
-		    bottom: 15px;
+		    bottom: 18px;
 		    left: 50%;
 		    transform: translate(-50%, 40px);
 		}
@@ -144,6 +190,17 @@
 	    bottom: 5px;
 	    transform: perspective(500px) rotateY(-10deg);
 	    width: 26%;
+
+		.image-overlay {
+			height: calc(100% - 3.2rem);
+			width: calc(100% - 0.6rem);
+			top: calc(50% - 1px);
+			left: 50%;
+			&__text {
+				font-size: 2rem;
+			}
+		}
+
 	    &:before {
 	    	background-color: white;
 	    	border-radius: 3px;

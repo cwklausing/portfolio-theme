@@ -4,7 +4,7 @@
 
 @mixin object-fit($fit) {
 	object-fit: $fit;
-	font-family: 'object-fit: $fit;';
+	font-family: 'object-fit: #{$fit}';
 }
 
 /*

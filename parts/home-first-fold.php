@@ -10,7 +10,7 @@ $button_url		= get_field( 'welcome_button_link' );
 
 <div class="fold-first">
 	<div class="home-hero">
-		<?php echo wp_get_attachment_image( $hero_image['ID'], 'large', false, '' ); ?>
+		<?php echo wp_get_attachment_image( $hero_image['ID'], 'xxl', false, '' ); ?>
 	</div>
 	<div class="welcome-section">
 		<h1 class="welcome-section__text"><?php echo esc_html( $welcome_text ); ?></h1>

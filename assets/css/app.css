@@ -316,19 +316,19 @@ h2 {
   line-height: 3.6rem; }
 
 h3 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   line-height: 3.4rem; }
 
 h4 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 3.2rem; }
 
 h5 {
-  font-size: 2.2rem;
-  line-height: 2.0rem; }
+  font-size: 2.0rem;
+  line-height: 3.0rem; }
 
 h6 {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   line-height: 2.8rem; }
 
 p {
@@ -485,39 +485,10 @@ div {
 /*
   Width Styling
  */
-.width-onehundred {
-  width: 100%; }
-
-.width-max {
-  width: 95%;
-  max-width: 80rem;
+.max-width {
+  max-width: 68rem;
   margin-right: auto;
   margin-left: auto; }
-
-.width-half {
-  width: 95%; }
-
-.width-third {
-  width: 95%; }
-
-.width-fourth {
-  width: 95%; }
-
-/*
-  Height styling
- */
-.height-small {
-  height: 100px; }
-
-.height-med {
-  height: 200px; }
-
-.height-large {
-  height: 300px; }
-
-.bg-img {
-  background-position: center;
-  background-size: cover; }
 
 /* ===========================================================
   Icons
@@ -643,15 +614,18 @@ div {
     padding: 2rem;
     border-radius: 3px;
     box-shadow: 3px 4px 25px -7px black;
-    margin: 4rem auto 0;
-    max-width: 60rem; }
+    margin: 4rem auto 0; }
     .port-item__description p {
       margin: 0; }
   .port-item__images {
     position: relative;
     height: 200px;
-    margin: 0 auto;
+    margin: 15px auto;
     max-width: 320px; }
+    @media only screen and (min-width: 600px) {
+      .port-item__images {
+        height: 230px;
+        max-width: 350px; } }
     .port-item__images:before {
       background-color: rgba(0, 0, 0, 0.2);
       border-radius: 50%;
@@ -662,6 +636,24 @@ div {
       height: 36px;
       width: 100%;
       transform: translateX(-50%); }
+      @media only screen and (min-width: 600px) {
+        .port-item__images:before {
+          width: 110%; } }
+    .port-item__images .image-overlay {
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      padding: 0.5rem;
+      position: absolute;
+      text-align: center;
+      transform: translateX(-50%) translateY(-50%);
+      transition: opacity 300ms ease-in-out; }
+      .port-item__images .image-overlay:hover {
+        opacity: 1; }
+        .port-item__images .image-overlay:hover .image-overlay__text {
+          color: black; }
   .port-item__title {
     margin-bottom: 2.5rem;
     text-align: center; }
@@ -694,8 +686,21 @@ div {
     left: 0;
     top: 0;
     transform: perspective(600px) rotateY(24deg); }
+    @media only screen and (min-width: 440px) {
+      .port-item__desktop-image {
+        height: 180px; } }
+    @media only screen and (min-width: 600px) {
+      .port-item__desktop-image {
+        height: 200px; } }
     .port-item__desktop-image img {
-      height: calc(100% - 5px); }
+      height: 100%; }
+    .port-item__desktop-image .image-overlay {
+      height: calc(100% - 2rem);
+      width: calc(100% - 2rem);
+      top: 50%;
+      left: 50%; }
+      .port-item__desktop-image .image-overlay__text {
+        font-size: 3rem; }
     .port-item__desktop-image:after {
       content: ' ';
       display: block;
@@ -707,7 +712,7 @@ div {
       height: 20px;
       width: 100px;
       position: absolute;
-      bottom: 15px;
+      bottom: 18px;
       left: 50%;
       transform: translate(-50%, 40px); }
   .port-item__mobile-image {
@@ -720,6 +725,13 @@ div {
     bottom: 5px;
     transform: perspective(500px) rotateY(-10deg);
     width: 26%; }
+    .port-item__mobile-image .image-overlay {
+      height: calc(100% - 3.2rem);
+      width: calc(100% - 0.6rem);
+      top: calc(50% - 1px);
+      left: 50%; }
+      .port-item__mobile-image .image-overlay__text {
+        font-size: 2rem; }
     .port-item__mobile-image:before {
       background-color: white;
       border-radius: 3px;
@@ -806,7 +818,6 @@ footer {
     .fold-second {
       padding: 5rem 2.5rem; } }
   .fold-second__content {
-    max-width: 60rem;
     margin: 0 auto; }
   .fold-second__header {
     margin-bottom: 4rem; }
@@ -825,7 +836,7 @@ footer {
   .home-hero img {
     height: 100%;
     object-fit: cover;
-    font-family: 'object-fit: $fit;'; }
+    font-family: "object-fit: cover"; }
 
 .welcome-section {
   display: flex;
@@ -835,7 +846,7 @@ footer {
   margin-top: 7.5rem;
   min-height: 35rem;
   position: relative;
-  padding-right: 2rem;
+  padding: 0rem 2rem;
   width: 100%; }
   @media only screen and (min-width: 440px) {
     .welcome-section {
@@ -846,6 +857,9 @@ footer {
   @media only screen and (min-width: 800px) {
     .welcome-section {
       min-height: 55rem; } }
+  @media only screen and (min-width: 1000px) {
+    .welcome-section {
+      min-height: 61rem; } }
   .welcome-section__text {
     line-height: 1.3;
     margin: 0;
