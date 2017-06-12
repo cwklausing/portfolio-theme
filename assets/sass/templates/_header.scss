@@ -19,8 +19,11 @@ header {
 		width: 100%;
 		z-index: 2;
 	}
+	&__branding {
+		display: inline-block;
+	}
 	&__title {
-		color: $white;
+		color: #fff;
 		font-weight: normal;
 		margin: 0;
 	}
