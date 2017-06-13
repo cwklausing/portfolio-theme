@@ -2,15 +2,18 @@
 	NOT styling for the actual menu items. See navigation.scss */
 
 .main-nav {
-	position: fixed;
-    width: 100%;
     background-color: $white;
 	box-shadow: 0px -5px 14px 5px #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     height: 100vh;
-    padding: 11rem 2rem 2rem;
+    padding: 8rem 2rem 2rem;
+	position: fixed;
     transform: translateY(-100vh);
+    width: 100%;
     z-index: 1;
     transition:
     	transform 400ms ease-out;

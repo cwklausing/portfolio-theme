@@ -5,7 +5,16 @@ footer {
 	background-color: $blue;
 	color: $white;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
+	@include bp(xs) {
+		padding: 1rem 2rem;
+	}
+	@include bp(sm) {
+		padding: 1rem 3rem;
+	}
+	@include bp(md) {
+		padding: 1rem 5rem;
+	}
 }
