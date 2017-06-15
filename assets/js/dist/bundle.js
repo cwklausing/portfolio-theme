@@ -250,8 +250,23 @@
 		return _public;
 	}(jQuery);
 
+	var slideIn = function ($) {
+		var $home_hero = $('.home-hero');
+
+		var _public = {};
+
+		_public.init = function () {
+			setTimeout(function () {
+				$home_hero.addClass('slide-in');
+			}, 300);
+		};
+
+		return _public;
+	}(jQuery);
+
 	// Vendors
 	fix$1();
 	mobile_menu.init();
+	slideIn.init();
 
 }());
