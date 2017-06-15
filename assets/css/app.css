@@ -106,7 +106,8 @@ body {
   background-color: #dfdee6; }
 
 .primary {
-  margin-top: 7rem; }
+  margin-top: 7rem;
+  min-height: 79vh; }
 
 /**
  * Taken from Twentysixteen theme:
@@ -354,9 +355,10 @@ p {
 a {
   font-size: 1.6rem;
   text-decoration: none;
-  color: #212121; }
+  color: #212121;
+  transition: color 300ms ease-in-out; }
   a:hover {
-    color: #212121;
+    color: #909090;
     cursor: pointer;
     text-decoration: none; }
 
@@ -476,6 +478,10 @@ div {
 /* ===========================================================
 	Navigation
 ============================================================ */
+.site-header a {
+  color: #fff; }
+  .site-header a:hover {
+    color: #bb965b; }
 .site-header .main-nav .page_item {
   text-align: center; }
   .site-header .main-nav .page_item a {
@@ -505,7 +511,6 @@ div {
       height: 100%;
       position: relative; }
       .site-header .main-nav .page_item a {
-        color: #fff;
         font-size: 1.8rem;
         padding: 1rem 2rem;
         position: relative; } }
@@ -525,6 +530,8 @@ div {
     padding-right: 2rem; } }
 .site-footer__nav .page_item a {
   color: #fff; }
+  .site-footer__nav .page_item a:hover {
+    color: #bb965b; }
 
 /* ===========================================================
   Sizing
@@ -548,9 +555,10 @@ div {
 .social-media svg {
   height: 54px;
   width: 54px;
-  fill: #dfdee6; }
+  fill: #dfdee6;
+  transition: fill 300ms ease-in-out; }
   .social-media svg:hover {
-    fill: #212121; }
+    fill: #bb965b; }
 
 /* ===========================================================
   Buttons
@@ -563,7 +571,7 @@ div {
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
   .button:hover {
     background-color: #a07c43;
-    color: #212121;
+    color: #fff;
     cursor: pointer;
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
   .button:active {
@@ -642,7 +650,6 @@ div {
   margin: 0;
   text-align: center; }
 .portfolio__pieces {
-  background-color: #fff;
   display: flex;
   flex-wrap: wrap; }
 .portfolio__underline {
@@ -856,7 +863,10 @@ div {
   .site-header__title {
     color: #fff;
     font-weight: normal;
-    margin: 0; }
+    margin: 0;
+    transition: color 300ms ease-in-out; }
+    .site-header__title:hover {
+      color: #bb965b; }
 
 /* ===========================================================
   Footer
@@ -889,6 +899,13 @@ footer {
   @media only screen and (min-width: 440px) {
     .fold-second {
       padding: 5rem 2.5rem; } }
+  .fold-second__button {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    text-align: center; }
+    @media only screen and (min-width: 600px) {
+      .fold-second__button {
+        margin-top: 3rem; } }
   .fold-second__content {
     margin: 0 auto; }
   .fold-second__header {

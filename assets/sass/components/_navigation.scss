@@ -3,6 +3,13 @@
 ============================================================ */
 
 .site-header {
+	a {
+		color: #fff;
+		&:hover {
+			color: $gold;
+		}
+	}
+
 	.main-nav {
 		.page_item {
 			text-align: center;
@@ -41,7 +48,6 @@
 				height: 100%;
 				position: relative;
 				a {
-					color: #fff;
 					font-size: 1.8rem;
 					padding: 1rem 2rem;
 					position: relative;
@@ -87,6 +93,9 @@
 
 		a {
 			color: #fff;
+			&:hover {
+				color: $gold;
+			}
 		}
 	}
 }

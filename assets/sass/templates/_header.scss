@@ -43,5 +43,10 @@
 		color: #fff;
 		font-weight: normal;
 		margin: 0;
+		transition:
+			color 300ms ease-in-out;
+		&:hover {
+			color: $gold;
+		}
 	}
 }

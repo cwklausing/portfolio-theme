@@ -3,8 +3,6 @@
     "title": "Home Page",
     "fields": [
         {
-            "placement": "left",
-            "endpoint": 0,
             "key": "field_592e18db7cfee",
             "label": "Top of Page",
             "name": "",
@@ -16,19 +14,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "left",
+            "endpoint": 0
         },
         {
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
             "key": "field_592e18f47cfef",
             "label": "Hero Image",
             "name": "hero_image",
@@ -40,14 +30,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_592e192c7cff0",
             "label": "Welcome Text",
             "name": "welcome_text",
@@ -59,14 +54,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
+            },
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
+            "append": ""
+        },
+        {
             "key": "field_592e19717cff1",
             "label": "Welcome Button Text",
             "name": "welcome_button_text",
@@ -78,16 +73,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "allow_archives": 1,
             "key": "field_592e19867cff2",
             "label": "Welcome Button Link",
             "name": "welcome_button_link",
@@ -99,13 +92,18 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1
         },
         {
-            "placement": "left",
-            "endpoint": 0,
             "key": "field_592e19a77cff3",
-            "label": "Content Section",
+            "label": "About Section",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -115,14 +113,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "left",
+            "endpoint": 0
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_592e19cb7cff4",
             "label": "About Title",
             "name": "about_title",
@@ -134,11 +129,54 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "placement": "left",
-            "endpoint": 0,
+            "key": "field_594201ae67699",
+            "label": "About Button",
+            "name": "about_button",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_594201f46769a",
+            "label": "About Button Text",
+            "name": "about_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_592e19e97cff5",
             "label": "Portfolio",
             "name": "",
@@ -150,14 +188,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "left",
+            "endpoint": 0
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_59357f0a92611",
             "label": "Portfolio Title",
             "name": "portfolio_title",
@@ -169,38 +204,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "sub_fields": [
-                {
-                    "post_type": [
-                        "portfolio-piece"
-                    ],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1,
-                    "key": "field_592e1a247cff7",
-                    "label": "Portfolio Item",
-                    "name": "portfolio_item",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    }
-                }
-            ],
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "collapsed": "",
             "key": "field_592e19fb7cff6",
             "label": "Portfolio Items",
             "name": "portfolio_items",
@@ -212,7 +223,36 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_592e1a247cff7",
+                    "label": "Portfolio Item",
+                    "name": "portfolio_item",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "portfolio-piece"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
         }
     ],
     "location": [
@@ -232,5 +272,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496778191
+    "modified": 1497498124
 }

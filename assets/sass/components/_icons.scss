@@ -13,8 +13,10 @@
     height: 54px;
     width: 54px;
     fill: $white;
+    transition:
+      fill 300ms ease-in-out;
     &:hover {
-      fill: $hover-color;
+      fill: $gold;
     }
   }
 }
