@@ -16,6 +16,7 @@
 		text-align: center;
 	}
 	&__pieces {
+		background-color: #fff;
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -42,12 +43,11 @@
 	}
 
 	&__description {
-		background-color: #dfdee6;
+		background-color: #eee;
 	    padding: 2rem;
 	    border-radius: 3px;
-	    box-shadow: 3px 4px 25px -7px black;
 	    margin: 4rem auto 0;
-	    p {
+	    p:first-of-type {
 	    	margin: 0;
 	    }
 	}
@@ -100,15 +100,15 @@
 		}
 	}
 	&__title {
-		margin-bottom: 2.5rem;
+		margin-bottom: 0;
 		text-align: center;
 	}
-	
-	&:nth-of-type(3n - 2) {
-		background-color: #557f5b;
+
+	&__underline {
+		margin-bottom: 3rem;
 	}
+	
 	&:nth-of-type(3n - 1) {
-		background-color: #fdfda3;
 		.port-item__desktop-image {
 			border-left: none;
 			border-right: 5px solid $gray;
@@ -125,9 +125,6 @@
 			left: 9px;
 			transform: perspective(500px) rotateY(10deg);
 		}
-	}
-	&:nth-of-type(3n) {
-		background-color: #da654c;
 	}
 
 	/* Computer/phone graphics */

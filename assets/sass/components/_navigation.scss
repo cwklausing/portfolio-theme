@@ -1,54 +1,92 @@
 /* ===========================================================
-  Navigation
+	Navigation
 ============================================================ */
 
-.main-nav {
-  .page_item {
-    padding: 1rem 0;
-    text-align: center;
-    a {
-      font-size: 2.2rem;
-      line-height: 5rem;
-    }
-  }
+.site-header {
+	.main-nav {
+		.page_item {
+			text-align: center;
+			a {
+				padding: 1rem 0;
+				font-size: 2.2rem;
+				line-height: 5rem;
+			}
+		}
+
+		// For mobile menu styling, see _mobile-menu.scss
+		@include bp(md) {
+			background-color: transparent;
+			box-shadow: none;
+			display: block;
+			height: auto;
+			width: auto;
+			padding: 0;
+			position: static;
+			transform: none;
+
+			& > div {
+				height: 100%;
+			}
+
+			ul {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 100%;
+			}
+
+			.page_item {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				position: relative;
+				a {
+					color: #fff;
+					font-size: 1.8rem;
+					padding: 1rem 2rem;
+					position: relative;
+				}
+			}
+		}
+	}
 }
 
 #menu-main-menu, #menu-footer-menu {
-  @include bp(tablet) {
-    padding: 20px 0;
-  }
-  li {
-    text-align: center;
-  }
-  a {
-    font-weight: 700;
-  }
+	@include bp(tablet) {
+		padding: 20px 0;
+	}
+	li {
+		text-align: center;
+	}
+	a {
+		font-weight: 700;
+	}
 }
 
 #menu-main-menu {
-  @include bp(tablet) {
-    margin: 20px 10%;
-  }
+	@include bp(tablet) {
+		margin: 20px 10%;
+	}
 }
 
 .menu-item {
-  width: 100%;
-  margin: 10px 0;
-  @include bp(tablet) {
-    width: auto;
-    margin: 0;
-  }
+	width: 100%;
+	margin: 10px 0;
+	@include bp(tablet) {
+		width: auto;
+		margin: 0;
+	}
 }
 
 .site-footer__nav {
-  .page_item {
-    @include bp(xs) {
-      display: inline-block;
-      padding-right: 2rem;
-    }
+	.page_item {
+		@include bp(xs) {
+			display: inline-block;
+			padding-right: 2rem;
+		}
 
-    a {
-      color: $white;
-    }
-  }
+		a {
+			color: #fff;
+		}
+	}
 }

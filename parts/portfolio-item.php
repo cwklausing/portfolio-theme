@@ -11,7 +11,6 @@ $desktop = get_field( 'desktop_image' )['sizes']['large'];
 $mobile = get_field( 'mobile_image' )['sizes']['large'];
 ?>
 <article class="port-item">
-	<h3 class="port-item__title"><?php the_title(); ?></h3>
 	<div class="port-item__images">
 		<a href="<?php echo esc_url( $url ); ?>" class="port-item__desktop-image" target="_blank">
 			<img src="<?php echo esc_url( $desktop ); ?>" />
@@ -31,6 +30,8 @@ $mobile = get_field( 'mobile_image' )['sizes']['large'];
 		</a>
 	</div>
 	<div class="port-item__description max-width">
+		<h3 class="port-item__title"><?php the_title(); ?></h3>
+		<div class="port-item__underline sbc-underline"></div>
 		<?php the_content(); ?>
 	</div>
 	<div class="button--visit-site">

@@ -1,26 +1,43 @@
 /* ===========================================================
   Header
 ============================================================ */
-header {
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 10;
-}
-
-.site-header {
-	display: flex;
-	justify-content: space-between;
+	
+	@include bp(md) {
+		background-color: $blue;
+    	box-shadow: 0px -5px 14px 5px #212121;
+		padding: 0 2rem;
+	}
 	&__bar {
 		background-color: $blue;
     	box-shadow: 0px -5px 14px 5px #212121;
-		padding: 2rem;
+		height: 7rem;
 		width: 100%;
 		z-index: 2;
+		@include bp(md) {
+			background-color: transparent;
+			box-shadow: none;
+			width: auto;
+			z-index: none;
+		}
 	}
 	&__branding {
 		display: inline-block;
+		height: 100%;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+	    height: 100%;
+	    padding: 0 2rem;
 	}
 	&__title {
 		color: #fff;

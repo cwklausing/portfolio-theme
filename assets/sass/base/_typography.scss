@@ -22,33 +22,46 @@ h6 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
+  line-height: 4rem;
   padding: 30px 0;
+  @include bp(sm) {
+    font-size: 3.8rem;
+    line-height: 5rem;
+  }
 }
 
 h2 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  @include bp(sm) {  
+    font-size: 3.5rem;
+    line-height: 5rem;
+  }
+}
+
+h3 {
+  font-size: 2.0rem;
+  line-height: 3.2rem;
+  @include bp(sm) {
+    font-size: 3.0rem;
+    line-height: 4.2rem;
+  }
+}
+
+h4 {
   font-size: 2.8rem;
   line-height: 3.6rem;
 }
 
-h3 {
-  font-size: 2.4rem;
-  line-height: 3.4rem;
-}
-
-h4 {
-  font-size: 2.2rem;
+h5 {
+  font-size: 2.6rem;
   line-height: 3.2rem;
 }
 
-h5 {
-  font-size: 2.0rem;
-  line-height: 3.0rem;
-}
-
 h6 {
-  font-size: 1.8rem;
-  line-height: 2.8rem;
+  font-size: 2.2rem;
+  line-height: 3.0rem;
 }
 
 p {
@@ -62,6 +75,7 @@ a {
   color: $black;
   &:hover {
     color: $hover-color;
+    cursor: pointer;
     text-decoration: none;
   }
 }
