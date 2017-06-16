@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<div class="primary">
+<div class="primary max-width">
 
 	<?php if ( have_posts() ) :
 

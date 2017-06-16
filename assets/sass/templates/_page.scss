@@ -1,0 +1,9 @@
+.page-template-default {
+	.primary {
+		padding: 0 1.5rem;
+
+		@include bp(sm) {
+			padding: 0 2.5rem;
+		}
+	}
+}
