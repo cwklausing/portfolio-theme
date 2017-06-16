@@ -4,6 +4,9 @@
 /*
  * Calculate breakpoints
  */
+/**
+ * Header mixins
+ */
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
@@ -894,28 +897,37 @@ footer {
 .fold-first {
   position: relative; }
 
-.fold-second {
+.fold-second__button {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center; }
+  @media only screen and (min-width: 600px) {
+    .fold-second__button {
+      margin-top: 3rem; } }
+.fold-second__content {
+  margin: 0 auto; }
+.fold-second__header {
+  background-color: #576973;
+  padding: 4rem 0; }
+  @media only screen and (min-width: 440px) {
+    .fold-second__header {
+      padding: 5rem 0; } }
+  @media only screen and (min-width: 800px) {
+    .fold-second__header {
+      padding: 7rem 0; } }
+.fold-second__text {
   padding: 4rem 1.5rem; }
   @media only screen and (min-width: 440px) {
-    .fold-second {
+    .fold-second__text {
       padding: 5rem 2.5rem; } }
-  .fold-second__button {
-    margin-top: 2rem;
-    padding: 1rem 0;
-    text-align: center; }
-    @media only screen and (min-width: 600px) {
-      .fold-second__button {
-        margin-top: 3rem; } }
-  .fold-second__content {
-    margin: 0 auto; }
-  .fold-second__header {
-    margin-bottom: 4rem; }
-    @media only screen and (min-width: 440px) {
-      .fold-second__header {
-        margin-bottom: 5rem; } }
-  .fold-second__title {
-    margin: 0;
-    text-align: center; }
+.fold-second__title {
+  color: #fff;
+  margin: 0;
+  text-align: center; }
+.fold-second__underline {
+  border-color: #dfdee6; }
+  .fold-second__underline:after {
+    border-color: #dfdee6; }
 
 .home-hero {
   background: linear-gradient(142deg, #fff 50%, #C8C8C8);
@@ -950,7 +962,7 @@ footer {
   justify-content: center;
   margin: 0 auto;
   min-height: 35rem;
-  max-width: 100rem;
+  max-width: 80rem;
   position: relative;
   padding: 0rem 2rem;
   width: 100%; }

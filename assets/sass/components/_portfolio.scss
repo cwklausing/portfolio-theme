@@ -1,29 +1,16 @@
 .portfolio {
 	&__header {
-		background-color: $blue;
-		padding: 4rem 0;
-
-		@include bp(xs) {
-			padding: 5rem 0;
-		}
-		@include bp(md) {
-			padding: 7rem 0;
-		}
+		@include header;
 	}
 	&__title {
-		color: #fff;
-		margin: 0;
-		text-align: center;
+		@include header-title;
 	}
 	&__pieces {
 		display: flex;
 		flex-wrap: wrap;
 	}
 	&__underline {
-		border-color: $white;
-		&:after {
-			border-color: $white;
-		}
+		@include header-underline;
 	}
 }
 

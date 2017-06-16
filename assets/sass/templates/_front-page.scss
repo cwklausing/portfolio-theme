@@ -7,12 +7,6 @@
 }
 
 .fold-second {
-	padding: 4rem 1.5rem;
-
-	@include bp(xs) {
-		padding: 5rem 2.5rem;
-	}
-
 	&__button {
 	    margin-top: 2rem;
 	    padding: 1rem 0;
@@ -27,14 +21,22 @@
 	}
 
 	&__header {
-		margin-bottom: 4rem;
+		@include header;
+	}
+
+	&__text {
+		padding: 4rem 1.5rem;
+
 		@include bp(xs) {
-			margin-bottom: 5rem;
+			padding: 5rem 2.5rem;
 		}
 	}
 	&__title {
-		margin: 0;
-		text-align: center;
+		@include header-title;
+	}
+
+	&__underline {
+		@include header-underline;
 	}
 }
 
@@ -73,14 +75,13 @@
 }
 
 .welcome-section {
-	// background-color: rgba(250,250,250,0.5);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
 	margin: 0 auto;
 	min-height: 35rem;
-	max-width: 100rem;
+	max-width: 80rem;
 	position: relative;
 	padding: 0rem 2rem;
 	width: 100%;

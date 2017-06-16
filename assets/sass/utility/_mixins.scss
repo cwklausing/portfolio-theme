@@ -19,3 +19,32 @@
 		}
 	}
 }
+
+/**
+ * Header mixins
+ */
+
+@mixin header {
+	background-color: $blue;
+	padding: 4rem 0;
+
+	@include bp(xs) {
+		padding: 5rem 0;
+	}
+	@include bp(md) {
+		padding: 7rem 0;
+	}
+}
+
+@mixin header-title {
+	color: #fff;
+	margin: 0;
+	text-align: center;
+}
+
+@mixin header-underline {
+	border-color: $white;
+	&:after {
+		border-color: $white;
+	}
+}
