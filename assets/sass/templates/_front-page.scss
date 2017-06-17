@@ -36,7 +36,7 @@
 	}
 
 	&__underline {
-		@include header-underline;
+		@include header-underline(white);
 	}
 }
 

@@ -31,6 +31,8 @@ h1 {
   }
 }
 
+// TODO: Update font sizes, change front page manually.
+
 h2 {
   font-size: 2.5rem;
   line-height: 4rem;
@@ -71,14 +73,13 @@ p {
 
 a {
   font-size: 1.6rem;
-  text-decoration: none;
+  text-decoration: underline;
   color: $black;
   transition:
     color 300ms ease-in-out;
   &:hover {
     color: $hover-color;
     cursor: pointer;
-    text-decoration: none;
   }
 }
 
@@ -89,8 +90,16 @@ ul {
 }
 
 li {
-  text-transform: uppercase;
   list-style: none;
+}
+
+ol {
+  margin: 1rem 0;
+  padding-left: 5rem;
+  li {
+    list-style-type: decimal;
+    padding-left: 1rem;
+  }
 }
 
 span {
@@ -100,6 +109,14 @@ span {
 
 pre {
   word-wrap: break-word;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
 }
 
 div {

@@ -1,9 +1,23 @@
 .page-template-default {
+	.entry {
+		padding: 2rem 0 4rem;
+		&__header {
+			padding: 2rem 0;
+		}
+		&__title {
+			padding: 0;
+			text-align: center;
+		}
+	}
+
 	.primary {
 		padding: 0 1.5rem;
 
 		@include bp(sm) {
 			padding: 0 2.5rem;
+		}
+		@include bp(md) {
+			padding: 0;
 		}
 	}
 }

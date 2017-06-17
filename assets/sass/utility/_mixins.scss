@@ -42,9 +42,9 @@
 	text-align: center;
 }
 
-@mixin header-underline {
-	border-color: $white;
+@mixin header-underline( $color: $black) {
+	border-color: $color;
 	&:after {
-		border-color: $white;
+		border-color: $color;
 	}
 }

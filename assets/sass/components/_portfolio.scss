@@ -10,7 +10,7 @@
 		flex-wrap: wrap;
 	}
 	&__underline {
-		@include header-underline;
+		@include header-underline(white);
 	}
 }
 

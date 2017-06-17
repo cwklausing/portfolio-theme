@@ -5,8 +5,10 @@
 .site-header {
 	a {
 		color: #fff;
+		text-decoration: none;
 		&:hover {
 			color: $gold;
+			text-decoration: none;
 		}
 	}
 
@@ -17,6 +19,7 @@
 				padding: 1rem 0;
 				font-size: 2.2rem;
 				line-height: 5rem;
+				text-transform: uppercase;
 			}
 		}
 
@@ -85,17 +88,20 @@
 }
 
 .site-footer__nav {
+	a {
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			color: $gold;
+			text-decoration: none;
+		}
+	}
 	.page_item {
 		@include bp(xs) {
 			display: inline-block;
 			padding-right: 2rem;
 		}
 
-		a {
-			color: #fff;
-			&:hover {
-				color: $gold;
-			}
-		}
 	}
 }

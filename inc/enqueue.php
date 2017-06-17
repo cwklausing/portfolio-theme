@@ -9,7 +9,7 @@ if ( ! function_exists( 'sbconnor_styles' ) ) {
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 
     // Google fonts
-    wp_enqueue_style( 'google_fonts', "https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700", false );
+    wp_enqueue_style( 'google_fonts', "https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700", false );
   }
 }
 
