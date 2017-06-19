@@ -7,6 +7,7 @@
 	color: #fff;
     padding: 0.8rem 1.8rem;
     letter-spacing: 1px;
+    text-decoration: none;
 	transition:
 		background-color 200ms ease-in-out,
 		color 200ms ease-in-out;	
@@ -26,5 +27,9 @@
 		transition:
 			box-shadow 100ms ease-in-out,
 			color 100ms ease-in-out;
+    }
+
+    span {
+    	text-decoration: none;
     }
 }

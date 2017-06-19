@@ -588,6 +588,7 @@ div {
   color: #fff;
   padding: 0.8rem 1.8rem;
   letter-spacing: 1px;
+  text-decoration: none;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
   .button:hover {
     background-color: #a07c43;
@@ -598,6 +599,8 @@ div {
     box-shadow: 5px 5px 5px -5px #404040 inset;
     color: #303030;
     transition: box-shadow 100ms ease-in-out, color 100ms ease-in-out; }
+  .button span {
+    text-decoration: none; }
 
 /* 	Contains styling for mobile menu container, 
 	NOT styling for the actual menu items. See navigation.scss */
@@ -835,7 +838,8 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.0rem; }
+    font-size: 2.0rem;
+    text-decoration: none; }
     .button--visit-site__link .icon {
       height: 2rem;
       margin-left: 1rem; }
