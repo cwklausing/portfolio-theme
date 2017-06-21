@@ -741,16 +741,16 @@ div {
     text-align: center; }
   .port-item__underline {
     margin-bottom: 3rem; }
-  .port-item:nth-of-type(3n - 1) .port-item__desktop-image {
+  .port-item:nth-of-type(2n) .port-item__desktop-image {
     border-left: none;
     border-right: 5px solid #606060;
     left: auto;
     right: 0;
     transform: perspective(600px) rotateY(-24deg); }
-    .port-item:nth-of-type(3n - 1) .port-item__desktop-image:after {
+    .port-item:nth-of-type(2n) .port-item__desktop-image:after {
       border-left: none;
       border-right: 5px solid #606060; }
-  .port-item:nth-of-type(3n - 1) .port-item__mobile-image {
+  .port-item:nth-of-type(2n) .port-item__mobile-image {
     right: auto;
     left: 9px;
     transform: perspective(500px) rotateY(10deg); }
