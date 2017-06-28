@@ -15,3 +15,15 @@ if ( ! function_exists( 'customGraphic') ) {
 
 	add_shortcode( 'graphic', 'customGraphic' );
 }
+
+if ( ! function_exists( 'sbcButton' ) ) {
+	function sbcButton( $atts, $content = null ) {
+		extract(shortcode_atts( array(
+			"link" => 'http://sitesbyconnor.dev',
+			"class" => '',
+		), $atts));
+		return '<a href="'.$link.'" class="button '.$class.'">'.$content.'</a>';
+	}
+
+	add_shortcode( 'sbcbutton', 'sbcButton' );
+}

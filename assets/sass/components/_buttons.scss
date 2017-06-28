@@ -5,7 +5,7 @@
 .button {
     background-color: $gold;
 	color: #fff;
-    padding: 0.8rem 1.8rem;
+    padding: 1rem 2.4rem;
     letter-spacing: 1px;
     text-decoration: none;
 	transition:
@@ -29,7 +29,40 @@
 			color 100ms ease-in-out;
     }
 
+    &--xl {
+    	padding: 1.5rem 4rem;
+    	font-size: 2rem;
+    }
+
     span {
     	text-decoration: none;
+    }
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+    background-color: $gold;
+	color: #fff;
+    padding: 1rem 2.4rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+	transition:
+		background-color 200ms ease-in-out,
+		color 200ms ease-in-out;	
+
+	&:hover {
+		background-color: darken(#bb965b, 10%);
+		color: #fff;
+		cursor: pointer;
+		transition:
+			background-color 200ms ease-in-out,
+			color 200ms ease-in-out;
+	}
+
+    &:active {
+    	box-shadow: 5px 5px 5px -5px #404040 inset;
+    	color: $dark-gray;
+		transition:
+			box-shadow 100ms ease-in-out,
+			color 100ms ease-in-out;
     }
 }
