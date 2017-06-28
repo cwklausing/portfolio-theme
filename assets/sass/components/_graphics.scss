@@ -1,30 +1,52 @@
 .graphic {
 	&-exploring {
 		background-image: url(../images/telescope.svg);
-		background-size: 23rem 23rem;
+		background-size: 13rem 13rem;
 		background-repeat: no-repeat;
-		height: 23rem;
-		width: 23rem;
+		height: 13rem;
+		width: 13rem;
 		float: left;
 		margin-right: 2rem;
+		margin-top: 1rem;
+
+		@include bp(sm) {
+			background-size: 20rem 20rem;
+			height: 20rem;
+			width: 20rem;		
+		}
 	}
 	&-designing {
 		background-image: url(../images/designing.svg);
-		background-size: 23rem 23rem;
+		background-size: 15rem 15rem;
 		background-repeat: no-repeat;
-		height: 23rem;
-		width: 23rem;
+		height: 15rem;
+		width: 15rem;
+		margin-right: 2rem;
 		float: right;
-		margin-left: 2rem;
+
+		@include bp(sm) {
+			background-size: 25rem 25rem;
+			float: right;
+			margin-left: 2rem;
+			margin-right: 0;
+			height: 25rem;
+			width: 25rem;		
+		}
 	}
 	&-developing {
 		background-image: url(../images/developing.svg);
-		background-size: 23rem 23rem;
+		background-size: 15rem 15rem;
 		background-repeat: no-repeat;
-		height: 23rem;
-		width: 23rem;
+		height: 15rem;
+		width: 15rem;
 		float: left;
 		margin-right: 2rem;
+
+		@include bp(sm) {
+			background-size: 23rem 23rem;
+			height: 23rem;
+			width: 23rem;		
+		}
 	}
 	&-signature {
 		background-image: url(../images/signature.svg);
@@ -32,15 +54,24 @@
 	    background-repeat: no-repeat;
 	    height: 10rem;
 	    width: 20rem;
-	    margin: -1rem 0 2rem 2rem;
+	    margin: -1rem auto 2rem;
 	}
 	&-testing {
 		background-image: url(../images/testing.svg);
-		background-size: 23rem 23rem;
+		background-size: 15rem 15rem;
 		background-repeat: no-repeat;
-		height: 23rem;
-		width: 23rem;
+		height: 15rem;
+		width: 15rem;
+		margin-right: 2rem;
 		float: right;
-		margin-left: 2rem;
+
+		@include bp(sm) {
+			background-size: 19rem 19rem;
+			float: right;
+			margin-left: 2rem;
+			margin-right: 0;
+			height: 19rem;
+			width: 19rem;		
+		}
 	}
 }

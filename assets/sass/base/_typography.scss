@@ -37,7 +37,7 @@ h2 {
   font-size: 2.5rem;
   line-height: 4rem;
   @include bp(sm) {  
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     line-height: 5rem;
   }
 }
@@ -95,7 +95,10 @@ li {
 
 ol {
   margin: 1rem 0;
-  padding-left: 5rem;
+  padding-left: 3rem;
+  @include bp(sm) {
+    padding-left: 5rem;
+  }
   li {
     list-style-type: decimal;
     padding-left: 1rem;
@@ -122,6 +125,10 @@ em {
 div {
   font-size: 1.6rem;
   line-height: 2.6rem;
+}
+
+hr {
+  border: 1px solid gray;
 }
 
 .sbc-underline {
