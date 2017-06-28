@@ -564,21 +564,45 @@ div {
   margin-right: auto;
   margin-left: auto; }
 
-.graphic {
+.graphic-exploring {
+  background-image: url(../images/telescope.svg);
   background-size: 23rem 23rem;
   background-repeat: no-repeat;
   height: 23rem;
-  width: 23rem; }
-  .graphic-exploring {
-    background-image: url(../images/telescope.svg);
-    float: left;
-    margin-left: -8rem;
-    margin-right: 2rem; }
-  .graphic-designing {
-    background-image: url(../images/designing.svg);
-    float: right;
-    margin-left: 2rem;
-    margin-right: -8rem; }
+  width: 23rem;
+  float: left;
+  margin-right: 2rem; }
+.graphic-designing {
+  background-image: url(../images/designing.svg);
+  background-size: 23rem 23rem;
+  background-repeat: no-repeat;
+  height: 23rem;
+  width: 23rem;
+  float: right;
+  margin-left: 2rem; }
+.graphic-developing {
+  background-image: url(../images/developing.svg);
+  background-size: 23rem 23rem;
+  background-repeat: no-repeat;
+  height: 23rem;
+  width: 23rem;
+  float: left;
+  margin-right: 2rem; }
+.graphic-signature {
+  background-image: url(../images/signature.svg);
+  background-size: 20rem 10rem;
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 20rem;
+  margin: -1rem 0 2rem 2rem; }
+.graphic-testing {
+  background-image: url(../images/testing.svg);
+  background-size: 23rem 23rem;
+  background-repeat: no-repeat;
+  height: 23rem;
+  width: 23rem;
+  float: right;
+  margin-left: 2rem; }
 
 /* ===========================================================
   Icons
@@ -602,7 +626,7 @@ div {
 .button {
   background-color: #bb965b;
   color: #fff;
-  padding: 0.8rem 1.8rem;
+  padding: 1rem 2.4rem;
   letter-spacing: 1px;
   text-decoration: none;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
@@ -615,8 +639,28 @@ div {
     box-shadow: 5px 5px 5px -5px #404040 inset;
     color: #303030;
     transition: box-shadow 100ms ease-in-out, color 100ms ease-in-out; }
+  .button--xl {
+    padding: 1.5rem 4rem;
+    font-size: 2rem; }
   .button span {
     text-decoration: none; }
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  background-color: #bb965b;
+  color: #fff;
+  padding: 1rem 2.4rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
+  div.wpforms-container-full .wpforms-form button[type=submit]:hover {
+    background-color: #a07c43;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out; }
+  div.wpforms-container-full .wpforms-form button[type=submit]:active {
+    box-shadow: 5px 5px 5px -5px #404040 inset;
+    color: #303030;
+    transition: box-shadow 100ms ease-in-out, color 100ms ease-in-out; }
 
 /* 	Contains styling for mobile menu container, 
 	NOT styling for the actual menu items. See navigation.scss */

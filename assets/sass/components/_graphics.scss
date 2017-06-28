@@ -1,19 +1,46 @@
 .graphic {
-	background-size: 23rem 23rem;
-	background-repeat: no-repeat;
-	height: 23rem;
-	width: 23rem;
-	
 	&-exploring {
 		background-image: url(../images/telescope.svg);
+		background-size: 23rem 23rem;
+		background-repeat: no-repeat;
+		height: 23rem;
+		width: 23rem;
 		float: left;
-		margin-left: -8rem;
 		margin-right: 2rem;
 	}
 	&-designing {
 		background-image: url(../images/designing.svg);
+		background-size: 23rem 23rem;
+		background-repeat: no-repeat;
+		height: 23rem;
+		width: 23rem;
 		float: right;
 		margin-left: 2rem;
-		margin-right: -8rem;
+	}
+	&-developing {
+		background-image: url(../images/developing.svg);
+		background-size: 23rem 23rem;
+		background-repeat: no-repeat;
+		height: 23rem;
+		width: 23rem;
+		float: left;
+		margin-right: 2rem;
+	}
+	&-signature {
+		background-image: url(../images/signature.svg);
+	    background-size: 20rem 10rem;
+	    background-repeat: no-repeat;
+	    height: 10rem;
+	    width: 20rem;
+	    margin: -1rem 0 2rem 2rem;
+	}
+	&-testing {
+		background-image: url(../images/testing.svg);
+		background-size: 23rem 23rem;
+		background-repeat: no-repeat;
+		height: 23rem;
+		width: 23rem;
+		float: right;
+		margin-left: 2rem;
 	}
 }
