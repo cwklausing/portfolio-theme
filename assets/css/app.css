@@ -1140,4 +1140,17 @@ footer {
     .page-template-default .primary {
       padding: 0; } }
 
+.fourohfour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .fourohfour__title {
+    font-size: 16rem;
+    line-height: 10rem;
+    padding-top: 3rem; }
+  .fourohfour__text {
+    margin-top: 10rem; }
+
 /*# sourceMappingURL=app.css.map */

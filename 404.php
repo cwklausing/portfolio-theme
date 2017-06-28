@@ -6,9 +6,9 @@
 get_header();
 ?>
 
-<div class="margin-edge">
-  <h2>Whoops!</h2>
-  <h3>We can't find the page you're looking for.  Make sure you entered the correct address.</h3>
+<div class="fourohfour primary">
+  <h1 class="fourohfour__title">404</h1>
+  <h3 class="fourohfour__text">Whoops! I couldn't find the page you're looking for.</h3>
 </div>
 
 <?php get_footer(); ?>

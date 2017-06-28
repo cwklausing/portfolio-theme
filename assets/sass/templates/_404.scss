@@ -1,0 +1,15 @@
+.fourohfour {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__title {
+		font-size: 16rem;
+		line-height: 10rem;
+		padding-top: 3rem;
+	}
+	&__text {
+		margin-top: 10rem;
+	}
+}
