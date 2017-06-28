@@ -4,14 +4,18 @@ var resolve = require('rollup-plugin-node-resolve');
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		cssmin: {
+		postcss: {
 			options: {
-				shorthandCompacting: false,
-				roundingPrecision: -1
+				map: false,
+				processors: [
+					require('pixrem')(), // add fallbacks for rem units
+					require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+					require('cssnano')() // minify the result
+				]
 			},
 			dist: {
 				files: {
-					'assets/css/app-min.css': ['assets/css/app.css']
+					'assets/css/app-min.css': 'assets/css/app.css'
 				}
 			}
 		},
@@ -42,7 +46,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: './assets/**/*.scss',
-				tasks: ['sass', 'cssmin']
+				tasks: ['sass', 'postcss']
 			},
 			js: {
 				files: './assets/**/*.js',
@@ -51,7 +55,7 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-rollup');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');

@@ -800,7 +800,8 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     position: relative;
     height: 200px;
     margin: 15px auto;
-    max-width: 320px; }
+    max-width: 320px;
+    transform: translateZ(-500px); }
     @media only screen and (min-width: 600px) {
       .port-item__images {
         height: 230px;
