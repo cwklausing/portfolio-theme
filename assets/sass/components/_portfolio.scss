@@ -45,7 +45,7 @@
 		max-width: 320px;
 		transform: translateZ(-500px);
 
-		@include bp(sm) {
+		@include bp(xs) {
 			height: 230px;
 			max-width: 350px;
 		}
@@ -127,10 +127,6 @@
 		transform: perspective(600px) rotateY(24deg);
 
 		@include bp(xs) {
-			height: 180px;
-		}
-
-		@include bp(sm) {
 			height: 200px;
 		}
 

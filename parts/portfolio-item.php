@@ -7,8 +7,8 @@ $item_id = get_sub_field( 'portfolio_item' )->ID;
 $post = $item_id;
 setup_postdata( $post );
 $url 	= get_field( 'url' );
-$desktop = get_field( 'desktop_image' )['sizes']['large'];
-$mobile = get_field( 'mobile_image' )['sizes']['large'];
+$desktop = get_field( 'desktop_image' )['sizes']['medium'];
+$mobile = get_field( 'mobile_image' )['sizes']['medium'];
 ?>
 <article class="port-item">
 	<div class="port-item__images">

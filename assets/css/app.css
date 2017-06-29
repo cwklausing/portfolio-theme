@@ -369,9 +369,6 @@ ul {
   -webkit-margin-after: 0;
   -webkit-padding-start: 0; }
 
-li {
-  list-style: none; }
-
 ol {
   margin: 1rem 0;
   padding-left: 3rem; }
@@ -802,7 +799,7 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     margin: 15px auto;
     max-width: 320px;
     transform: translateZ(-500px); }
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 440px) {
       .port-item__images {
         height: 230px;
         max-width: 350px; } }
@@ -863,9 +860,6 @@ div.wpforms-container-full .wpforms-form button[type=submit] {
     top: 0;
     transform: perspective(600px) rotateY(24deg); }
     @media only screen and (min-width: 440px) {
-      .port-item__desktop-image {
-        height: 180px; } }
-    @media only screen and (min-width: 600px) {
       .port-item__desktop-image {
         height: 200px; } }
     .port-item__desktop-image img {
@@ -1049,13 +1043,16 @@ footer {
     border-color: white; }
 
 .home-hero {
-  background: linear-gradient(90deg, white 60%, #dfdee6 49%);
+  background: linear-gradient(90deg, white 65%, #dfdee6 49%);
   overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%; }
+  @media only screen and (min-width: 800px) {
+    .home-hero {
+      background: linear-gradient(90deg, white 60%, #dfdee6 49%); } }
   .home-hero img {
     position: absolute;
     padding: 2rem 0 0;

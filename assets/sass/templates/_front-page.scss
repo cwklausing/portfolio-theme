@@ -41,13 +41,17 @@
 }
 
 .home-hero {
-    background: linear-gradient(90deg, white 60%, #dfdee6 49%);
+    background: linear-gradient(90deg, white 65%, $white 49%);
 	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
+
+	@include bp(md) {
+		background: linear-gradient(90deg, white 60%, $white 49%);
+	}
 
 	img {
 		position: absolute;
