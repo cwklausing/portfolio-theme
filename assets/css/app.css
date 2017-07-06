@@ -550,17 +550,21 @@ hr {
   width: 100%;
   margin: 10px 0; }
 
-.site-footer__nav a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase; }
-  .site-footer__nav a:hover {
-    color: #bb965b;
-    text-decoration: none; }
-@media only screen and (min-width: 440px) {
+.site-footer__nav {
+  flex-grow: 1; }
+  .site-footer__nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .site-footer__nav a:hover {
+      color: #bb965b;
+      text-decoration: none; }
   .site-footer__nav .page_item {
-    display: inline-block;
-    padding-right: 2rem; } }
+    display: block; }
+    @media only screen and (min-width: 440px) {
+      .site-footer__nav .page_item {
+        display: inline-block;
+        padding-right: 2rem; } }
 
 /* ===========================================================
   Sizing
@@ -995,10 +999,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem; }
-  @media only screen and (min-width: 440px) {
-    footer {
-      padding: 1rem 2rem; } }
+  padding: 1rem 2rem; }
   @media only screen and (min-width: 600px) {
     footer {
       padding: 1rem 3rem; } }
